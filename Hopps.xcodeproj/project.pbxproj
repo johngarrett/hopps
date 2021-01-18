@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		96ACBFC025B64C430092048D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACBFBF25B64C430092048D /* AppDelegate.swift */; };
 		96ACBFC225B64C430092048D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACBFC125B64C430092048D /* SceneDelegate.swift */; };
-		96ACBFC425B64C430092048D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACBFC325B64C430092048D /* ViewController.swift */; };
+		96ACBFC425B64C430092048D /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACBFC325B64C430092048D /* AppListViewController.swift */; };
 		96ACBFC725B64C430092048D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96ACBFC525B64C430092048D /* Main.storyboard */; };
 		96ACBFC925B64C460092048D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96ACBFC825B64C460092048D /* Assets.xcassets */; };
 		96ACBFCC25B64C460092048D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96ACBFCA25B64C460092048D /* LaunchScreen.storyboard */; };
+		96ACBFDA25B650FA0092048D /* SparkAppItem.h in Sources */ = {isa = PBXBuildFile; fileRef = 96ACBFD525B64FE40092048D /* SparkAppItem.h */; };
+		96ACBFE125B652640092048D /* SparkAppList.h in Sources */ = {isa = PBXBuildFile; fileRef = 96ACBFDE25B652330092048D /* SparkAppList.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		96ACBFBC25B64C430092048D /* Hopps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hopps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ACBFBF25B64C430092048D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96ACBFC125B64C430092048D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		96ACBFC325B64C430092048D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96ACBFC325B64C430092048D /* AppListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListViewController.swift; sourceTree = "<group>"; };
 		96ACBFC625B64C430092048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96ACBFC825B64C460092048D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96ACBFCB25B64C460092048D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96ACBFCD25B64C460092048D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96ACBFD525B64FE40092048D /* SparkAppItem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = SparkAppItem.h; sourceTree = "<group>"; };
+		96ACBFDE25B652330092048D /* SparkAppList.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = SparkAppList.h; sourceTree = "<group>"; };
+		96ACBFE825B6546D0092048D /* Hopps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hopps-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +61,26 @@
 		96ACBFBE25B64C430092048D /* Hopps */ = {
 			isa = PBXGroup;
 			children = (
+				96ACBFE825B6546D0092048D /* Hopps-Bridging-Header.h */,
+				96ACBFF225B6557E0092048D /* SparkList */,
 				96ACBFBF25B64C430092048D /* AppDelegate.swift */,
 				96ACBFC125B64C430092048D /* SceneDelegate.swift */,
-				96ACBFC325B64C430092048D /* ViewController.swift */,
+				96ACBFC325B64C430092048D /* AppListViewController.swift */,
 				96ACBFC525B64C430092048D /* Main.storyboard */,
 				96ACBFC825B64C460092048D /* Assets.xcassets */,
 				96ACBFCA25B64C460092048D /* LaunchScreen.storyboard */,
 				96ACBFCD25B64C460092048D /* Info.plist */,
 			);
 			path = Hopps;
+			sourceTree = "<group>";
+		};
+		96ACBFF225B6557E0092048D /* SparkList */ = {
+			isa = PBXGroup;
+			children = (
+				96ACBFD525B64FE40092048D /* SparkAppItem.h */,
+				96ACBFDE25B652330092048D /* SparkAppList.h */,
+			);
+			path = SparkList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96ACBFC425B64C430092048D /* ViewController.swift in Sources */,
+				96ACBFC425B64C430092048D /* AppListViewController.swift in Sources */,
 				96ACBFC025B64C430092048D /* AppDelegate.swift in Sources */,
+				96ACBFDA25B650FA0092048D /* SparkAppItem.h in Sources */,
 				96ACBFC225B64C430092048D /* SceneDelegate.swift in Sources */,
+				96ACBFE125B652640092048D /* SparkAppList.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +218,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -222,6 +241,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Hopps/Hopps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -261,6 +281,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -276,6 +297,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Hopps/Hopps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -288,6 +310,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Hopps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Hopps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
